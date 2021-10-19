@@ -108,13 +108,17 @@ exports.execute = function (req, res) {
     const to = requestBody.to;
     const from = requestBody.messagingService;
     const body = requestBody.body;;
-
+    console.log("API key"+accountSid);
+    console.log("Numbers"+authToken);
+    console.log("to"+to);
+    console.log("from"+from);
+    console.log("body"+body);
     const client = require('twilio')(accountSid, authToken); 
      
     client.messages 
           .create({ 
              body: body,
-             from: '+18646592286',
+             from: from,
              to: to,
              provideFeedback:true
            }) 
