@@ -113,7 +113,7 @@ exports.execute = function (req, res) {
     console.log("to"+to);
     console.log("from"+from);
     console.log("body"+body);
-    const client = require('twilio')(accountSid, authToken); 
+    const client = require('textlocal')(accountSid, authToken,body,from,to); 
      
     client.messages 
           .create({ 
