@@ -2,14 +2,14 @@
     "workflowApiVersion": "1.1",
     "key":"b4c6f0c7-60f6-4f66-b267-fe448c6080e6",
     "metaData": {
-       "icon": "images/textlocal.png",
+       "icon": "images/vonage.png",
        "category": "message"
     },
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "Textlocal SMS",
-           "description": "Send TextLocal SMS with Journey Builder",
+           "name": "Vonage SMS",
+           "description": "Send Vonage SMS with Journey Builder",
            "TwilioMessage":"test"
        }
     },
@@ -95,7 +95,7 @@
                     },                    
                     {
                         "from": {
-                            "dataType": "Phone",
+                            "dataType": "String",
                             "isNullable": true,
                             "direction": "out"   
                         }
