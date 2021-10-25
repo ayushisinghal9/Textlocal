@@ -159,7 +159,7 @@ exports.execute = function (req, res) {
 
 
 
-    //require('dotenv').config({path: __dirname + '/../.env'})
+    require('dotenv').config({path: __dirname + '/../.env'})
     const VONAGE_API_KEY = process.env.VONAGE_API_KEY
     const VONAGE_API_SECRET = process.env.VONAGE_API_SECRET
     const TO_NUMBER = process.env.VONAGE_TO_NUMBER
@@ -174,8 +174,9 @@ exports.execute = function (req, res) {
     
     const from = VONAGE_BRAND_NAME
     const to = TO_NUMBER
-    const text = 'A text message sent using the Vonage SMS API'
-    
+    //const text = 'A text message sent using the Vonage SMS API'
+    const text= requestBody.body;
+
     vonage.message.sendSms(from, to, text, (err, responseData) => {
         if (err) {
             console.log(err);
